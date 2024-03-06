@@ -1,6 +1,6 @@
 const pub = require("../models/publication-model")
 const reaction = require("../models/reaction-model")
-
+const coms = require("../models/comment-model")
 
 
 const createPub =async(req,res)=>
@@ -15,7 +15,10 @@ const reagir=async(req,res)=>
     res.status(201).json({success:true,message:"Created successfull",rect:react})
 }
 
+const commentaire =async(req,res)=>
+{
+    const comment = await coms.create(req.body)
+    res.status(201).json({success:true,message:"commented successfull",rect:comment})
+}
 
-
-
-module.exports = {createPub,reagir}
+module.exports = {createPub,reagir,commentaire}
