@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState } from "react";
 import {
   Navbar,
@@ -56,7 +58,7 @@ export default function NavBar() {
   };
 
   return (
-    <Navbar maxWidth="2xl" className=" bg-back text-white">
+    <Navbar maxWidth="2xl" className=" z-[99999999999999] bg-back text-white">
       <NavbarBrand>
         <label htmlFor="">logo</label>
         <p className="font-bold text-inherit">ENI</p>
@@ -66,15 +68,27 @@ export default function NavBar() {
           if (item.isSelected) {
             return (
               <NavbarItem key={key}>
-                <Link onClick={()=>setActiveItem(item)} className="text-secondary font-semibold" href="#">{item.label}</Link>
+                <Link
+                  onClick={() => setActiveItem(item)}
+                  className="text-secondary font-semibold"
+                  href="#"
+                >
+                  {item.label}
+                </Link>
               </NavbarItem>
             );
           } else {
             return (
               <NavbarItem key={key}>
-              <Link  onClick={()=>setActiveItem(item)} className="text-white font-semibold" href="#">{item.label}</Link>
-            </NavbarItem>
-            )
+                <Link
+                  onClick={() => setActiveItem(item)}
+                  className="text-white font-semibold"
+                  href="#"
+                >
+                  {item.label}
+                </Link>
+              </NavbarItem>
+            );
           }
         })}
       </NavbarContent>
