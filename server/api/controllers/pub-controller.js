@@ -26,24 +26,18 @@ const commentaire = async (req, res) => {
 
 const createAlert = async (req, res) => {
   const alert = await event.create(req.body);
-  res
-    .status(201)
-    .json({
-      success: true,
-      message: "pub of event is successfullity :)",
-      alert: alert,
-    });
+  res.status(201).json({
+    success: true,
+    alert: alert,
+  });
 };
 
 const notification = async (req, res) => {
   const notif = await Notification.create(req.body);
-  res
-    .status(201)
-    .json({
-      success: true,
-      message: "notification successfullity :)",
-      notif: notif,
-    });
+  res.status(201).json({
+    success: true,
+    notif: notif,
+  });
 };
 
 module.exports = { createPub, reagir, commentaire, createAlert, notification };
