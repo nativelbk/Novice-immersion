@@ -16,3 +16,5 @@ router.post("/evenement", createAlert);
 router.post("/notification", notification);
 
 module.exports = router;
+
+module.exports = router;
