@@ -1,6 +1,6 @@
 import SchoolGallery from "./shool.galery";
-import About from "./about";
 import { presentationEni } from "../utils/const";
+import Parcours from "./parcours";
 
 export default function Description() {
   return (
@@ -13,7 +13,7 @@ export default function Description() {
           </p>
         </div>
         <div className="">
-          <About/>
+          <Parcours/>
         </div>
       </div>
       <div className="col-span-2">

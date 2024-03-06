@@ -2,7 +2,7 @@ import image from "../assets/image.gif";
 import { parcoursEni } from "../utils/const";
 import { Tabs } from "./tabs";
 
-export default function About() {
+export default function Parcours() {
   const tabs = [
     {
       title: "GB",
@@ -52,7 +52,7 @@ export default function About() {
   ];
 
   return (
-    <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start mt-4">
+    <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start mt-8">
       <Tabs tabs={tabs} />
     </div>
   );
