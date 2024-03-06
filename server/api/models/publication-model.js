@@ -11,16 +11,18 @@ const schema = new mongoose.Schema(
     path: {
       type: String,
     },
-    tag: {
+    tag:
+    {
       type: [String],
     },
     category: {
       type: String,
       required: [true, "Please provide a category"],
     },
-    reaction: [{ type: mongoose.Schema.Types.ObjectId, ref: "reaction" }],
+    reaction: [{ type: mongoose.Schema.Types.ObjectId, ref: "Reaction" }],
   },
-  { timestamps: true
+  {
+    timestamps: true
   }
 );
 
