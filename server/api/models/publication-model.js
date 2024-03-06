@@ -18,9 +18,9 @@ const schema = new mongoose.Schema(
       type: String,
       required: [true, "Please provide a category"],
     },
-    reaction: [{ type: mongoose.Schema.Types.ObjectId, ref: "reaction" }],
+    reaction: [{ type: mongoose.Schema.Types.ObjectId, ref: "Reaction" }],
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("publication", schema);
+module.exports = mongoose.model("Publication", schema);
