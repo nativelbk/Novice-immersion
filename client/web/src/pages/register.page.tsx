@@ -64,7 +64,7 @@ export function RegisterPage() {
           </button>
         </motion.div>
       </ImagesSlider>
-      <div className="mt-24">
+      <div className="flex items-center justify-cente">
         <DynamicComponent />
       </div>
     </div>
