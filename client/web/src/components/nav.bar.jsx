@@ -1,17 +1,44 @@
-import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu} from "@nextui-org/react";
-import {ChevronDown, Lock, Activity, Flash, Server, TagUser, Scale} from "../assets/icons/icons.jsx";
+import React, { useState } from "react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  Link,
+  Button,
+} from "@nextui-org/react";
 
+const navItems = [
+  {
+    label: "Eni immersion",
+    isSelected: true,
+  },
+  {
+    label: "A propos",
+    isSelected: false,
+  },
+  {
+    label: "Partenaires",
+    isSelected: false,
+  },
+  {
+    label: "Mentions & Parcours",
+    isSelected: false,
+  },
+];
 
 export default function NavBar() {
-  const icons = {
-    chevron: <ChevronDown fill="currentColor" size={16} />,
-    scale: <Scale className="text-warning" fill="currentColor" size={30} />,
-    lock: <Lock className="text-success" fill="currentColor" size={30} />,
-    activity: <Activity className="text-secondary" fill="currentColor" size={30} />,
-    flash: <Flash className="text-primary" fill="currentColor" size={30} />,
-    server: <Server className="text-success" fill="currentColor" size={30} />,
-    user: <TagUser className="text-danger" fill="currentColor" size={30} />,
+  const [navItemState, setNavItemState] = useState(navItems);
+
+  const setActiveItem = (item) => {
+    const items = navItemState.map((i) => {
+      if (i == item) {
+        return { ...i, isSelected: true };
+      } else {
+        return { ...i, isSelected: false };
+      }
+    });
+    setNavItemState(items);
   };
 
   return (
@@ -20,88 +47,42 @@ export default function NavBar() {
         <label htmlFor="">logo</label>
         <p className="font-bold text-inherit">ENI</p>
       </NavbarBrand>
-      <NavbarContent className="sm:flex gap-4" justify="center">
-        <Dropdown>
-          <NavbarItem>
-            <DropdownTrigger>
-              <Button
-                disableRipple
-                className="p-0 bg-transparent data-[hover=true]:bg-transparent"
-                endContent={icons.chevron}
-                radius="sm"
-                color="white"
-                variant="light"
-              >
-                A propos
-              </Button>
-            </DropdownTrigger>
-          </NavbarItem>
-          <DropdownMenu
-            aria-label="ACME features"
-            className="w-[340px]"
-            itemClasses={{
-              base: "gap-4",
-            }}
-          >
-            <DropdownItem
-              key="autoscaling"
-              description="ACME scales apps to meet user demand, automagically, based on load."
-              startContent={icons.scale}
-            >
-              Autoscaling
-            </DropdownItem>
-            <DropdownItem
-              key="usage_metrics"
-              description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
-              startContent={icons.activity}
-            >
-              Usage Metrics
-            </DropdownItem>
-            <DropdownItem
-              key="production_ready"
-              description="ACME runs on ACME, join us and others serving requests at web scale."
-              startContent={icons.flash}
-            >
-              Production Ready
-            </DropdownItem>
-            <DropdownItem
-              key="99_uptime"
-              description="Applications stay on the grid with high availability and high uptime guarantees."
-              startContent={icons.server}
-            >
-              +99% Uptime
-            </DropdownItem>
-            <DropdownItem
-              key="supreme_support"
-              description="Overcome any challenge with a supporting team ready to respond."
-              startContent={icons.user}
-            >
-              +Supreme Support
-            </DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Clubs
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link className="text-white" href="#">
-            Partenaires
-          </Link>
-        </NavbarItem>
+      <NavbarContent className="sm:flex gap-4 text-white" justify="center">
+        {navItemState.map((item, key) => {
+          if (item.isSelected) {
+            return (
+              <NavbarItem key={key}>
+                <Link onClick={()=>setActiveItem(item)} className="text-secondary font-semibold" href="#">{item.label}</Link>
+              </NavbarItem>
+            );
+          } else {
+            return (
+              <NavbarItem key={key}>
+              <Link  onClick={()=>setActiveItem(item)} className="text-white font-semibold" href="#">{item.label}</Link>
+            </NavbarItem>
+            )
+          }
+        })}
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" className="font-semibold" href="#" variant="flat">
+          <Button
+            as={Link}
+            color="secondary"
+            className="font-semibold"
+            href="#"
+            variant="flat"
+          >
             Se connecter
           </Button>
         </NavbarItem>
         <NavbarItem>
-          <Button className="bg-primary text-black font-semibold" as={Link} href="#" variant="flat">
+          <Button
+            className="bg-secondary text-black font-semibold"
+            as={Link}
+            href="#"
+            variant="flat"
+          >
             S'inscrire
           </Button>
         </NavbarItem>
