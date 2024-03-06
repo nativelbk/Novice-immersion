@@ -8,6 +8,7 @@ require("express-async-errors");
 const connect = require("./db/db");
 const authRouter = require("./routes/auth-route");
 const routePub = require("./routes/pub-route");
+const routemsg = require("./routes/route-msg")
 const notFound = require("./middleware/notFound");
 const errorHandler = require("./middleware/errorHandler");
 const protectedRoute = require("./routes/protected-route");
@@ -21,6 +22,7 @@ const io = new Server(server);
 app.use(express.json());
 app.use("/api/v1", authRouter);
 app.use("/api", routePub);
+app.use("/api",routemsg)
 
 app.use(
   "/api/v1/protected",
