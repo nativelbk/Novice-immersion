@@ -8,7 +8,7 @@ import HeroText from './HeroText';
 
 const Hero = () => {
     return (
-        <div className=" h-[80vh] flex justify-center items-center">
+        <div className=" h-[80vh] flex justify-center items-center" id="imersion">
             <Suspense fallback={<div className="text-[50px] absolute text-center ">Loading...</div>}>
                 <main className="pattern1">
 
