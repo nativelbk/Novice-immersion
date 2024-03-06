@@ -12,11 +12,11 @@ export default function HomePage() {
     <>
       <NavBar />
       <Hero />
-      <div className="z-[-3]">
         <SparklesPreview />
 
-      </div>
-      <LampDemo />
+      
+      {/* <LampDemo /> */}
+      <Description />
       <Club/>
     </>
   );

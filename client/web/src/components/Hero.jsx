@@ -27,6 +27,7 @@ const Hero = () => {
                         </main>
 
                     </div>
+            {/* <SparklesPreview /> */}
                 </main>
             </Suspense >
 
