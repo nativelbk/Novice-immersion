@@ -17,6 +17,7 @@ const schema = new mongoose.Schema(
     },
     category: {
       type: String,
+      required: [true, "Please provide a description"],
     },
   },
   { timestamps: true }
