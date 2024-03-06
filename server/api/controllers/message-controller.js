@@ -5,7 +5,6 @@ const io = new Server(server);
 
 const discussion = async (req, res) => {
     const { from, to, text } = req.body;
-
     const newMessage = new messageModel({ from, to, text });
 
     try {
@@ -23,7 +22,7 @@ const discussion = async (req, res) => {
 
     res.status(201).json({
         success: true,
-        message: "Message sent successfully :)",
+        message: "Message sended successfully :)",
         newMessage
     });
 };

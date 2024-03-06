@@ -22,6 +22,12 @@ const navItems = [
     isSelected: false,
   },
   {
+    label: "Communauté",
+    isSelected: false,
+    Link:"/community"
+  }
+  ,
+  {
     label: "Mentions & Parcours",
     isSelected: false,
   },
