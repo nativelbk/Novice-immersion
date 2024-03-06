@@ -26,4 +26,4 @@ const schema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("publication", schema);
+module.exports = mongoose.model("Publication", schema);
