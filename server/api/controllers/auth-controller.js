@@ -15,7 +15,8 @@ const login = async (req,res)=>{
     res.status(StatusCodes.OK).json({success:true,token:token})
 }
 
-const register = async (req,res)=>{
+const register = async (req,res)=>
+{
     const user = await model.create(req.body)
     const token = user.createToken()
     res.status(StatusCodes.CREATED).json({success:true,token:token})
