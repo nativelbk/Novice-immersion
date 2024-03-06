@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 const schema = new mongoose.Schema(
   {
-    alert: { type: mongoose.Schema.Types.ObjectId, ref: "Alert" },
+    alert: { type: mongoose.Schema.Types.ObjectId, ref: "Evenement" },
   },
   {
     timestamps: true,
