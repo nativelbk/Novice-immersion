@@ -18,7 +18,8 @@ const reagir=async(req,res)=>
 const commentaire =async(req,res)=>
 {
     const comment = await coms.create(req.body)
-    res.status(201).json({success:true,message:"commented successfullity",comment:comment})
+    res.status(201).json({success:true,message:"commented successfullity :)",comment:comment})
 }
+
 
 module.exports = {createPub,reagir,commentaire}
