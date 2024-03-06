@@ -8,7 +8,8 @@ const schema = new mongoose.Schema(
       required: [true, "Please provide a description"],
       trim: true,
     },
-    path: {
+    path:
+    {
       type: String,
     },
     tag:
