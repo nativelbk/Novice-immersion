@@ -17,9 +17,9 @@ require("./middleware/passport");
 
 
 app.use(express.json());
-
 app.use("/api/v1", authRouter);
 app.use("/api",routePub)
+
 app.use(
   "/api/v1/protected",
   passport.authenticate("jwt", { session: false }),

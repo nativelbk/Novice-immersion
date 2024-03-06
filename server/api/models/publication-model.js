@@ -11,7 +11,8 @@ const schema = new mongoose.Schema(
     path: {
       type: String,
     },
-    tag: {
+    tag:
+    {
       type: [String],
     },
     category: {
@@ -20,7 +21,9 @@ const schema = new mongoose.Schema(
     },
     reaction: [{ type: mongoose.Schema.Types.ObjectId, ref: "Reaction" }],
   },
-  { timestamps: true }
+  {
+    timestamps: true
+  }
 );
 
 module.exports = mongoose.model("Publication", schema);
