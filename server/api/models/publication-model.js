@@ -18,6 +18,7 @@ const schema = new mongoose.Schema(
       type: String,
       required: [true, "Please provide a category"],
     },
+    reaction: [{ type: mongoose.Schema.Types.ObjectId, ref: "reaction" }],
   },
   { timestamps: true }
 );
