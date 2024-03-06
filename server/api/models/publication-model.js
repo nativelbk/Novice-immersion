@@ -1,10 +1,9 @@
 /** @format */
 const mongoose = require("mongoose");
-require("dotenv").config();
 
 const schema = new mongoose.Schema(
   {
-    descrition: {
+    description: {
       type: String,
       required: [true, "Please provide a description"],
       trim: true,
