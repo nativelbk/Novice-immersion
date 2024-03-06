@@ -1,4 +1,3 @@
-
 const createPub = require("../controllers/pub-controller")
 const router = require("express").Router()
 
