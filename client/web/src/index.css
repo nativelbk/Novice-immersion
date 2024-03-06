@@ -14,3 +14,14 @@
 :root {
   background-color: #0b0b0b;
 }
+.gradient_violet{
+    background-image: linear-gradient(to right, #7800af ,#a836f5 ,#E542D6 , #5C0383);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* .container canvas {
+    width: 1200px;
+    height: 800px !important ;
+  } */

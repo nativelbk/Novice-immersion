@@ -23,6 +23,8 @@ module.exports = {
       },
     },
   },
+  darkMode: "class",
+  plugins: [nextui()],
 };
-export const darkMode = "class";
-export const plugins = [nextui()];
+// export const darkMode = "class";
+// export const plugins = [nextui()];

@@ -4,7 +4,7 @@ import Parcours from "./parcours";
 
 export default function Description() {
   return (
-    <div className=" grid grid-cols-3 text-white mx-24 my-12 gap-1 p-12 rounded-xl">
+    <div className=" relative grid grid-cols-3 text-white mx-24 my-12 gap-1 p-12 rounded-xl">
       <div className=" col-span-1">
         <div className=" col-span-1">
           <p className="text-4xl font-semibold">A propos</p>
