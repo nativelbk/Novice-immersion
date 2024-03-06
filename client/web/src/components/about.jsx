@@ -14,11 +14,11 @@ export default function About() {
       ),
     },
     {
-      title: "Mention & Parcours",
-      value: "Mention & Parcours",
+      title: "AEENI",
+      value: "AEENI",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-[#2D2D2D]">
-          <p>Mention & Parcours</p>
+          <p>AEENI</p>
           <DummyContent />
         </div>
       ),
