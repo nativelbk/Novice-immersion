@@ -1,6 +1,7 @@
 const pub = require("../models/publication-model")
 const reaction = require("../models/reaction-model")
 const coms = require("../models/comment-model")
+const event = require("../models/alert-model")
 
 
 const createPub =async(req,res)=>
@@ -21,5 +22,11 @@ const commentaire =async(req,res)=>
     res.status(201).json({success:true,message:"commented successfullity :)",comment:comment})
 }
 
+const createAlert=async(req,res)=>
+{
+    const alert = await event.create(req.body)
+    res.status(201).json({success:true,message:"pub of event is successfullity :)",alert:alert})
+}
 
-module.exports = {createPub,reagir,commentaire}
+
+module.exports = {createPub,reagir,commentaire,createAlert}
