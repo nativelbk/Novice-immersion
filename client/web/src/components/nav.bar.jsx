@@ -69,7 +69,7 @@ export default function NavBar() {
           <Button
             as={Link}
             color="secondary"
-            className="font-semibold"
+            className="px-4 py-2 rounded-full font-semibold"
             href="#"
             variant="flat"
           >
@@ -78,7 +78,7 @@ export default function NavBar() {
         </NavbarItem>
         <NavbarItem>
           <Button
-            className="bg-secondary text-black font-semibold"
+            className="bg-secondary text-black px-4 py-2 rounded-full font-semibold"
             as={Link}
             href="#"
             variant="flat"
