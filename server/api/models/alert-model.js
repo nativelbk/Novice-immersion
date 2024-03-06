@@ -25,4 +25,4 @@ const schema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Reaction", schema);
+module.exports = mongoose.model("Alert", schema);
