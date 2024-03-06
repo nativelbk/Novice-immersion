@@ -20,7 +20,8 @@ const schema = new mongoose.Schema(
     },
     reaction: [{ type: mongoose.Schema.Types.ObjectId, ref: "reaction" }],
   },
-  { timestamps: true }
+  { timestamps: true
+  }
 );
 
 module.exports = mongoose.model("publication", schema);
