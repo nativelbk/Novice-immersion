@@ -4,7 +4,7 @@ require("dotenv").config();
 
 const schema = new mongoose.Schema(
   {
-    descrition: {
+    description: {
       type: String,
       required: [true, "Please provide a description"],
       trim: true,
@@ -22,4 +22,4 @@ const schema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("User", schema);
+module.exports = mongoose.model("publication", schema);
