@@ -13,7 +13,7 @@ const schema = new mongoose.Schema(
     },
     title: {
       type: String,
-      require: [true, "please provide a title"],
+      required: [true, "please provide a title"],
     },
     path: {
       type: String,
