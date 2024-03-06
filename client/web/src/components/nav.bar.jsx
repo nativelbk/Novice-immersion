@@ -7,6 +7,9 @@ import {
   Link,
   Button,
 } from "@nextui-org/react";
+import { useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { registerCompenentState } from "../utils/states";
 
 const navItems = [
   {
@@ -29,6 +32,17 @@ const navItems = [
 
 export default function NavBar() {
   const [navItemState, setNavItemState] = useState(navItems);
+  const [current_register_component, setCRC] = useRecoilState(registerCompenentState);
+  const navigate = useNavigate()
+
+  const navigateTo = (path,action)=>{
+    if(action == "Signin") {
+      setCRC("SignIn")
+    } else {
+      setCRC("Login")
+    }
+    navigate(path)
+  }
 
   const setActiveItem = (item) => {
     const items = navItemState.map((i) => {
@@ -70,7 +84,7 @@ export default function NavBar() {
             as={Link}
             color="secondary"
             className="px-4 py-2 rounded-full font-semibold"
-            href="#"
+            onClick={()=>navigateTo("/register" , "Login")}
             variant="flat"
           >
             Se connecter
@@ -80,8 +94,8 @@ export default function NavBar() {
           <Button
             className="bg-secondary text-black px-4 py-2 rounded-full font-semibold"
             as={Link}
-            href="#"
             variant="flat"
+            onClick={()=>navigateTo("/register" , "Signin")}
           >
             S'inscrire
           </Button>
