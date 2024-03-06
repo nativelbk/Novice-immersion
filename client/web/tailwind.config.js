@@ -17,7 +17,10 @@ module.exports = {
         "secondary" : "#925FF0",
         "tertiary" : "#2D2D2D",
         "back" : "#0B0B0B",
-      }
+      },
+      fontFamily : {
+        body : ["Gabarito"]
+      },
     },
   },
 };

@@ -1,9 +1,16 @@
 /** @format */
 
+@font-face {
+  font-family: "Gabarito";
+  src: url("./fonts/Gabarito/Gabarito-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root{
-    background-color: #0B0B0B;
+:root {
+  background-color: #0b0b0b;
 }

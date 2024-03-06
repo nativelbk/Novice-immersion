@@ -1,46 +1,69 @@
-import image from "../assets/image.gif"
+import image from "../assets/image.gif";
+import { parcoursEni } from "../utils/const";
 import { Tabs } from "./tabs";
 
 export default function About() {
   const tabs = [
     {
-      title: "Presentation de l'ecole",
-      value: "Presentation de l'ecole",
+      title: "GB",
+      value: "GB",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-[#2D2D2D]">
-          <p>Presentation de l'ecole</p>
-          <DummyContent />
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-xl md:text-4xl font-bold text-white bg-[#2D2D2D]">
+          <DummyContent element={parcoursEni.IG} />
         </div>
       ),
     },
     {
-      title: "AEENI",
-      value: "AEENI",
+      title: "IG",
+      value: "IG",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-[#2D2D2D]">
-          <p>AEENI</p>
-          <DummyContent />
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-xl md:text-4xl font-bold text-white bg-[#2D2D2D]">
+          <DummyContent element={parcoursEni.IG}/>
+        </div>
+      ),
+    },
+    {
+      title: "ASR",
+      value: "ASR",
+      content: (
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-xl md:text-4xl font-bold text-white bg-[#2D2D2D]">
+          <DummyContent element={parcoursEni.IG} />
+        </div>
+      ),
+    },
+    {
+      title: "OCC",
+      value: "OCC",
+      content: (
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-xl md:text-4xl font-bold text-white bg-[#2D2D2D]">
+          <DummyContent element={parcoursEni.IG} />
+        </div>
+      ),
+    },
+    {
+      title: "GID",
+      value: "GID",
+      content: (
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 md:text-4xl font-bold text-white bg-[#2D2D2D]">
+          <DummyContent element={parcoursEni.IG} />
         </div>
       ),
     },
   ];
 
   return (
-    <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-40">
+    <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start mt-4">
       <Tabs tabs={tabs} />
     </div>
   );
 }
 
-const DummyContent = () => {
+const DummyContent = ({ element }) => {
   return (
-    <img
-      src={image}
-      alt="dummy image"
-      width="1000"
-      height="1000"
-      className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
-    />
+    <div className="text-sm">
+      <img src={element.icon} alt="" className="px-10"/>
+      <p className=" text-secondary text-xl text-center mb-4">{element.title}</p>
+      <p className=" font-normal">{element.content}</p>
+    </div>
   );
 };
-
