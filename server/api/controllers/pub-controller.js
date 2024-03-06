@@ -21,4 +21,5 @@ const commentaire =async(req,res)=>
     res.status(201).json({success:true,message:"commented successfullity",comment:comment})
 }
 
+
 module.exports = {createPub,reagir,commentaire}
