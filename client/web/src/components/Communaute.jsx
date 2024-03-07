@@ -8,8 +8,8 @@ const Communaute = () => {
 
     return (
         <div className='mt-10'>
-            <Button color="success" onPress={onOpen} endContent={<CameraIcon />}>
-                Ask un status
+            <Button color="warning" variant='bordered' onPress={onOpen} endContent={<CameraIcon />}>
+                Publier un evenement
             </Button>
             <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
                 <ModalContent>
