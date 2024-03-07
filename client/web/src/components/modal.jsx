@@ -1,4 +1,6 @@
-import React from "react";
+/** @format */
+
+import { useState } from "react";
 import {
   Modal,
   ModalContent,
@@ -10,12 +12,15 @@ import {
   Input,
   Textarea,
 } from "@nextui-org/react";
+import axios from "axios";
 import { IconPlus } from "@tabler/icons-react";
 import { BottomGradient, LabelInputContainer } from "./login";
 import { Label } from "@radix-ui/react-label";
 
+// eslint-disable-next-line react/prop-types
 export default function ModalFormBtn({ text }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [login, setLogin] = useState({ user: localStorage.getItem("id") });
   const handleChange = (e) => {
     setLogin((val) => {
       return {
@@ -28,16 +33,12 @@ export default function ModalFormBtn({ text }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(login);
-    const data = await axios.post("http://localhost:5000/api/v1/login", login);
+    const data = await axios.post(
+      "http://localhost:5000/api/create-pub",
+      login
+    );
     console.log(data);
-    if (data.data) {
-      setAuthorization(true);
-      localStorage.setItem("token", data.data.token);
-      navigate("/dashboard");
-      navigate("/dashboard");
-    } else {
-      setAuthorization(false);
-    }
+    window.location.reload();
   };
 
   return (
@@ -53,21 +54,10 @@ export default function ModalFormBtn({ text }) {
         <ModalContent className="bg-[#fffefe] rounded-lg">
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">
-                Publier
-              </ModalHeader>
+              <ModalHeader className="flex flex-col gap-1">Publier</ModalHeader>
               <ModalBody>
-                <form className="my-8" onSubmit={handleSubmit}>
+                <form method="post" className="my-8" onSubmit={handleSubmit}>
                   <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4"></div>
-                  <LabelInputContainer className="mb-4">
-                    <Label htmlFor="password">Ajouter un fichier</Label>
-                    <Input
-                      onChange={handleChange}
-                      className="bg-gray-200 py-2 px-1 rounded-sm"
-                      id="password"
-                      type="file"
-                    />
-                  </LabelInputContainer>
 
                   <LabelInputContainer className="mb-4">
                     <Label htmlFor="email">Ajouter du texte</Label>
@@ -77,7 +67,7 @@ export default function ModalFormBtn({ text }) {
                       id="email"
                       placeholder="Ajouter du texte"
                       type="email"
-                      name="email"
+                      name="description"
                     />
                   </LabelInputContainer>
 
@@ -85,16 +75,25 @@ export default function ModalFormBtn({ text }) {
                     className="bg-secondary relative group/btn w-full text-zinc-800 rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
                     type="submit"
                   >
-                    Login &rarr;
+                    Publier &rarr;
                     <BottomGradient />
                   </button>
                 </form>
               </ModalBody>
               <ModalFooter>
-                <Button className="py-2 px-4 rounded-full" color="danger" variant="light" onPress={onClose}>
+                <Button
+                  className="py-2 px-4 rounded-full"
+                  color="danger"
+                  variant="light"
+                  onPress={onClose}
+                >
                   Close
                 </Button>
-                <Button className="py-2 px-4 rounded-full" color="primary" onPress={onClose}>
+                <Button
+                  className="py-2 px-4 rounded-full"
+                  color="primary"
+                  onPress={onClose}
+                >
                   Action
                 </Button>
               </ModalFooter>

@@ -16,7 +16,7 @@ const schema = new mongoose.Schema(
     },
     category: {
       type: String,
-      required: [true, "Please provide a category"],
+      // required: [true, "Please provide a category"],
     },
     reaction: [{ type: mongoose.Schema.Types.ObjectId, ref: "Reaction" }],
     comment: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment" }],

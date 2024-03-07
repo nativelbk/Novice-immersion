@@ -18,6 +18,7 @@ export default function Publication({
   reaction,
   comment,
   user,
+  description,
 }) {
   const [isFollowed, setIsFollowed] = React.useState(false);
 
@@ -39,7 +40,7 @@ export default function Publication({
         </div>
       </CardHeader>
       <CardBody className="px-3 py-0 text-small h-fit">
-        <p className="">{category}</p>
+        <p className="">{description}</p>
         <span className="pt-2">
           #FrontendWithZoey
           <span className="py-2" aria-label="computer" role="img">

@@ -9,12 +9,13 @@ const path = require("path");
 
 const createPub = async (req, res) => {
   const cheminFichier = req.file && req.file.path;
+  console.log(cheminFichier);
   const { description, category, tag, user } = req.body;
   const result = await pub.create({
     description,
     category,
-    path: cheminFichier,
-    tag: [...tag],
+    // path: cheminFichier,
+    // tag: tag ? [...tag] : "",
     user,
   });
   res
@@ -22,7 +23,7 @@ const createPub = async (req, res) => {
     .json({ success: true, message: "Created successfull", pub: result });
 };
 const getPub = async (req, res) => {
-  const data = await pub.find().populate("user");
+  const data = await pub.find().populate("user").sort({ crearedAt: -1 });
   res.status(200).json({ publication: data });
 };
 
