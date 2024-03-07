@@ -31,6 +31,7 @@ export default function Login() {
       setAuthorization(true);
       localStorage.setItem("token", data.data.token);
       navigate("/dashboard");
+      navigate("/dashboard");
     } else {
       setAuthorization(false);
     }
