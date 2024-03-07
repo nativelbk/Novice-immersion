@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 const Menus = [
-  { title: "Dashboard", src: "Chart_fill", isSelected: true },
+  // { title: "Dashboard", src: "Chart_fill", isSelected: true },
+  { title: "Orientantion ", src: "Calendar", isSelected: false },
   { title: "Communaute", src: "Chat", isSelected: false },
   // { title: "Orientantion", src: "Search", isSelected: false },
-  { title: "Orientantion ", src: "Calendar", isSelected: false },
   { title: "Compte", src: "User", gap: false, isSelected: false },
   { title: "Analytics", src: "Chart" },
   { title: "Setting", src: "Setting", isSelected: false },
