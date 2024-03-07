@@ -1,8 +1,15 @@
+/** @format */
+
 import React from "react";
 import { HeroParallax } from "../components/hero.parallax";
 
 export function Club() {
-  return <div id="club"> <HeroParallax products={products} /></div>;
+  return (
+    <div id="club" className="overflow-w-scroll">
+      {" "}
+      <HeroParallax products={products} />
+    </div>
+  );
 }
 export const products = [
   {
