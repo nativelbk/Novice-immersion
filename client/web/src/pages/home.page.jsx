@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import { SVGMaskEffectDemo } from "../components/MaskDemo";
 import { LampDemo } from "../components/Lamp";
 import { SparklesPreview } from "../components/SpartklePreview";
+import Footer from "../components/Footer";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       {/* <LampDemo /> */}
       <Description />
       <Club />
+      <Footer/>
     </>
   );
 }
