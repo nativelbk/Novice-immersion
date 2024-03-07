@@ -8,6 +8,7 @@ import axios from "axios";
 import { useRecoilState } from "recoil";
 import { authenticatedState } from "../utils/states";
 import { useNavigate } from "react-router-dom";
+import { IconBrandGithub, IconBrandGoogle } from "@tabler/icons-react";
 
 export default function SignIn() {
   const navigate = useNavigate();
