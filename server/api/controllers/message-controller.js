@@ -13,7 +13,6 @@ const discussion = async (req, res) => {
     } catch (error) {
         return res.status(500).json({
             success: false,
-            message: "An error occurred while saving the message.",
             error: error.message
         });
     }
@@ -23,7 +22,6 @@ const discussion = async (req, res) => {
 
     res.status(201).json({
         success: true,
-        message: "Message sent successfully :)",
         newMessage
     });
 };
