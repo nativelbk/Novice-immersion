@@ -10,9 +10,7 @@ export default function DashboarPage() {
             <div className="col-span-3 h-screen overflow-y-auto px-12 ">
                 {/* <Communaute /> */}
             <PublicationList/>
-
-            </div>
-            <Rightbar />
+            <RigthBox/>
         </div>
     )
 }
