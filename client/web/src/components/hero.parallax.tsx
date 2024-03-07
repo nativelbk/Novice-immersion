@@ -106,9 +106,9 @@ export const Header = () => {
         Clubs , <br /> Association de l'AEENI 
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
+      Nous construisons de beaux produits avec les dernières technologies et frameworks. 
+      Nous sommes une équipe de développeurs et de designers 
+      passionnés qui aiment créer des produits étonnants.
       </p>
     </div>
   );

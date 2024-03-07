@@ -44,16 +44,15 @@ export default function SignIn() {
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-        Welcome to ENI immersion
+        Bienvenu chez-nous
       </h2>
       <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-        Login to aceternity if you can because we don&apos;t have a login flow
-        yet
+      Inscrivez-vous à l'ENI Novice Immersion si vous le pouvez car nous n'avons pas encore de flux de connexion
       </p>
 
       <form className="my-8" onSubmit={handleSubmit}>
         <LabelInputContainer>
-          <Label htmlFor="firstname">Full name</Label>
+          <Label htmlFor="firstname">Nom et prenom</Label>
           <Input
             onChange={handleChange}
             id="firstname"
@@ -64,7 +63,7 @@ export default function SignIn() {
           />
         </LabelInputContainer>
         <LabelInputContainer className="mt-4">
-          <Label htmlFor="email">Email Address</Label>
+          <Label htmlFor="email">Adresse Email</Label>
           <Input
             onChange={handleChange}
             id="email"
@@ -75,7 +74,7 @@ export default function SignIn() {
           />
         </LabelInputContainer>
         <LabelInputContainer className="mt-4">
-          <Label htmlFor="password">Password</Label>
+          <Label htmlFor="password">Mot de passe</Label>
           <Input
             onChange={handleChange}
             id="password"
@@ -90,7 +89,7 @@ export default function SignIn() {
           className="bg-gradient-to-br relative group/btn mt-4 text-back bg-secondary w-full rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"
         >
-          Sign up &rarr;
+          S'inscrir &rarr;
           <BottomGradient />
         </button>
 
