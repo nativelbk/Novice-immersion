@@ -1,3 +1,5 @@
+/** @format */
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/home.page";
 import { RegisterPage } from "./pages/register.page";
@@ -10,7 +12,7 @@ function App() {
       <Routes>
         <Route element={<HomePage />} path="/" />
         <Route element={<RegisterPage />} path="/register" />
-        <Route element={<DashboarPage/>} path="/dashboard"/>
+        <Route element={<DashboarPage />} path="/dashboard" />
       </Routes>
     </BrowserRouter>
   );
