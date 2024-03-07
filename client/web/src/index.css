@@ -69,6 +69,11 @@
   line-height: 1.2vw;
 }
 
+.white
+{
+  color: white;
+}
+
 .btn
 {
   border: 1px solid white;
