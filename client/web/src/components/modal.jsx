@@ -50,7 +50,7 @@ export default function ModalFormBtn({ text }) {
         <p>{text}</p>
       </Button>
       <Modal backdrop={`blur`} isOpen={isOpen} onOpenChange={onOpenChange}>
-        <ModalContent className="bg-[#fffefe] rounded-lg">
+        <ModalContent className="rounded-lg text-back bg-white">
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1">
@@ -63,7 +63,8 @@ export default function ModalFormBtn({ text }) {
                     <Label htmlFor="password">Ajouter un fichier</Label>
                     <Input
                       onChange={handleChange}
-                      className="bg-gray-200 py-2 px-1 rounded-sm"
+                      className="py-1 px-2 rounded-sm text-gray-300"
+                      color="tertiary"
                       id="password"
                       type="file"
                     />
@@ -72,7 +73,7 @@ export default function ModalFormBtn({ text }) {
                   <LabelInputContainer className="mb-4">
                     <Label htmlFor="email">Ajouter du texte</Label>
                     <Textarea
-                      className="bg-gray-200 py-2 px-1 rounded-sm"
+                      className="py-1 px-2 rounded-sm"
                       onChange={handleChange}
                       id="email"
                       placeholder="Ajouter du texte"
@@ -85,7 +86,7 @@ export default function ModalFormBtn({ text }) {
                     className="bg-secondary relative group/btn w-full text-zinc-800 rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
                     type="submit"
                   >
-                    Login &rarr;
+                    Publier &rarr;
                     <BottomGradient />
                   </button>
                 </form>
@@ -93,9 +94,6 @@ export default function ModalFormBtn({ text }) {
               <ModalFooter>
                 <Button className="py-2 px-4 rounded-full" color="danger" variant="light" onPress={onClose}>
                   Close
-                </Button>
-                <Button className="py-2 px-4 rounded-full" color="primary" onPress={onClose}>
-                  Action
                 </Button>
               </ModalFooter>
             </>

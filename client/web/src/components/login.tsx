@@ -16,10 +16,12 @@ import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const navigate = useNavigate();
+
   const [login, setLogin] = useState<{
     email: "";
     password: "";
   }>({ email: "", password: "" });
+
   const [authorization, setAuthorization] = useRecoilState(authenticatedState);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -36,6 +38,7 @@ export default function Login() {
       setAuthorization(false);
     }
   };
+
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setLogin((val) => {
       return {
@@ -44,64 +47,48 @@ export default function Login() {
       };
     });
   };
+
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input">
-      <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-        Welcome back
-      </h2>
-      <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-        Login to aceternity if you can because we don&apos;t have a login flow
-        yet
-      </p>
+    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
+    <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
+      Welcome back
+    </h2>
+    <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
+      Login to aceternity if you can because we don&apos;t have a login flow
+      yet
+    </p>
 
-      {/* TODO: Add moving gradient maybe maybe? */}
-      {/* content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: var(--line-width);
-    background: conic-gradient(from calc(var(--angle) + var(--start-angle)), transparent 0, var(--line-color) 20%, transparent 25%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: xor;
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    animation: inherit;
+    <form className="my-8" onSubmit={handleSubmit}>
+      <LabelInputContainer>
+        <Label htmlFor="email">E-mail</Label>
+        <Input
+          onChange={handleChange}
+          id="email"
+          placeholder="ralyandrynyainakadmiel@gmail.com"
+          type="text"
+          name="email"
+          required
+        />
+      </LabelInputContainer>
+      <LabelInputContainer className="mt-4">
+        <Label htmlFor="password">Password</Label>
+        <Input
+          onChange={handleChange}
+          id="password"
+          placeholder="••••••••"
+          name="password"
+          type="password"
+          required
+        />
+      </LabelInputContainer>
 
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    filter: drop-shadow(0 0 10px var(--line-color)); */}
-      <form className="my-8" onSubmit={handleSubmit}>
-        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4"></div>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
-          <Input
-            onChange={handleChange}
-            id="email"
-            placeholder="projectmayhem@fc.com"
-            type="email"
-            name="email"
-          />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="password">Password</Label>
-          <Input
-            onChange={handleChange}
-            id="password"
-            placeholder="••••••••"
-            type="password"
-            name="password"
-          />
-        </LabelInputContainer>
-
-        <button
-          className="bg-secondary relative group/btn w-full text-zinc-800 rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-          type="submit"
-        >
-          Login &rarr;
-          <BottomGradient />
-        </button>
+      <button
+        className="bg-gradient-to-br relative group/btn mt-4 text-back bg-secondary w-full rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+        type="submit"
+      >
+        Login &rarr;
+        <BottomGradient />
+      </button>
 
         <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
 
@@ -110,21 +97,6 @@ export default function Login() {
             className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
             type="submit"
           >
-            <IconBrandGithub className="h-4 w-4 text-neutral-800 dark:text-secondary" />
-              <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                GitHub
-              </span>
-              <BottomGradient />
-            </button>
-            <button
-              className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-              type="submit"
-            >
-              <IconBrandGoogle className="h-4 w-4 text-neutral-800 dark:text-secondary" />
-              <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                Google
-              </span>
-              <BottomGradient />
             <IconBrandGithub className="h-4 w-4 text-neutral-800 dark:text-secondary" />
             <span className="text-neutral-700 dark:text-neutral-300 text-sm">
               GitHub
