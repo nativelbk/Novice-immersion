@@ -1,10 +1,12 @@
 import { useState } from "react";
 import ModalFormBtn from "./modal";
+import { useRecoilState } from "recoil";
+import { dashMenuState } from "../utils/states";
 
 const Menus = [
   // { title: "Dashboard", src: "Chart_fill", isSelected: true },
-  { title: "Orientantion ", src: "Calendar", isSelected: false },
-  { title: "Communaute", src: "Chat", isSelected: false },
+  { title: "Orientantion ", src: "Calendar", isSelected: false ,value : "Orientation"},
+  { title: "Communauté", src: "Chat", isSelected: false, value : "PublicationList"},
   // { title: "Orientantion", src: "Search", isSelected: false },
   { title: "Compte", src: "User", gap: false, isSelected: false },
   { title: "Analytics", src: "Chart" },
@@ -14,8 +16,10 @@ const Menus = [
 export default function SideBar() {
   const [open, setOpen] = useState(true);
   const [menus, setMenuState] = useState(Menus);
+  const [dashMenu,setDashMenu] = useRecoilState(dashMenuState)
 
   const setActiveItem = (item) => {
+    setDashMenu(item.value)
     setMenuState(
       menus.map((i) => {
         if (i == item) {

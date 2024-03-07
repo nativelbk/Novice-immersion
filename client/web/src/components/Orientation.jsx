@@ -9,7 +9,7 @@ import { BackgroundGradientDemo } from './BgDemo'
 import Roadmp from './community/Roadmp'
 const Orientation = () => {
     return (
-        <div className='col-span-4'>
+        <div className='col-span-3 h-screen overflow-y-auto'>
             <SparklesPreview />
             <HeroScrollDemo />
             <h1 className='text-[32px] text-white border-b-1 w-fit'>Apprendre a specialiser</h1>

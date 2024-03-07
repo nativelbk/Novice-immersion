@@ -105,7 +105,7 @@ export const Header = () => {
       <h1 className="text-2xl md:text-7xl font-bold text-primary">
         Clubs , <br /> Association de l'AEENI 
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+      <p className="max-w-2xl text-base md:text-xl mt-8 white">
       Nous construisons de beaux produits avec les dernières technologies et frameworks. 
       Nous sommes une équipe de développeurs et de designers 
       passionnés qui aiment créer des produits étonnants.

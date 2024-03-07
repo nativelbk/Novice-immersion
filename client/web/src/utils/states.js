@@ -10,3 +10,8 @@ export const authenticatedState = atom({
   key: "authorized",
   default: false,
 });
+
+export const dashMenuState = atom({
+  key : "dashMenu",
+  default : "Orientation"
+})
