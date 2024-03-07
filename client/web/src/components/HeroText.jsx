@@ -8,10 +8,10 @@ const HeroText = () => {
                 ENI GUIDE NOVICES EMERSSION
             </h1>
             <h2 className='text-white'>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos tenetur accusamus ex repudiandae dolore
+            ENI Novice Immersion est une activité pour aider les nouveaux étudiants à mieux s'immerger 
             </h2>
-            <Button color="secondary" variant="bordered" className='w-[100px]'>
-                Get started
+            <Button color="secondary" variant="bordered" className='w-[100px] btn'>
+                <a href="#description">Savoir plus</a>
             </Button>
         </div>
     )

@@ -44,5 +44,26 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: grey; 
+  background: rgb(120, 86, 86); 
+}
+
+.logo
+{
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  margin-top: 2vw;
+}
+
+.explaint
+{
+  font-weight: bold;
+  color: #e7eae7;
+  line-height: 1.2vw;
+}
+
+.btn
+{
+  border: 1px solid white;
+  border-radius: 10px;
 }

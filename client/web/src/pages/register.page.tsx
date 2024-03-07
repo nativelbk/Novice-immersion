@@ -17,9 +17,9 @@ export function RegisterPage() {
   const [current_register_component, setCRC] = useRecoilState(registerCompenentState);
   useEffect(() => {
     if (current_register_component == "SignIn") {
-      setText("Login");
+      setText("Se connecter");
     } else {
-      setText("Sign up");
+      setText("S'inscrir");
     }
   }, [current_register_component]);
 

@@ -47,11 +47,10 @@ export default function Login() {
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-        Welcome back
+        Bienvenu chez-nous 
       </h2>
       <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-        Login to aceternity if you can because we don&apos;t have a login flow
-        yet
+      Connectez-vous à l'ENI Novice Immersion si vous le pouvez car nous n'avons pas encore de flux de connexion
       </p>
 
       {/* TODO: Add moving gradient maybe maybe? */}
@@ -75,7 +74,7 @@ export default function Login() {
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4"></div>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
+          <Label htmlFor="email">Adresse Email</Label>
           <Input
             onChange={handleChange}
             id="email"
@@ -85,7 +84,7 @@ export default function Login() {
           />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="password">Password</Label>
+          <Label htmlFor="password">Mot de passe</Label>
           <Input
             onChange={handleChange}
             id="password"
@@ -99,7 +98,7 @@ export default function Login() {
           className="bg-secondary relative group/btn w-full text-zinc-800 rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"
         >
-          Login &rarr;
+          Se connecter &rarr;
           <BottomGradient />
         </button>
 

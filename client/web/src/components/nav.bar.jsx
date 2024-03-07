@@ -15,7 +15,7 @@ import { registerCompenentState } from "../utils/states";
 
 const navItems = [
   {
-    label: "Eni immersion",
+    label: "ENI immersion",
     target : "#imersion",
     isSelected: true,
   },
@@ -25,7 +25,7 @@ const navItems = [
     isSelected: false,
   },
   {
-    label: "Partenaires",
+    label: "Divers club",
     target : "#club",
     isSelected: false,
   }
@@ -59,8 +59,9 @@ export default function NavBar() {
   return (
     <Navbar maxWidth="2xl" className=" z-[99999999999999] bg-back text-white">
       <NavbarBrand>
-        <label htmlFor="">logo</label>
-        <p className="font-bold text-inherit">ENI</p>
+        {/* <label htmlFor="">logo</label>
+        <p className="font-bold text-inherit">ENI</p> */}
+        <img className="logo" src="/301233346_455362809937832_3213526383772469179_n.jpg" alt="" />
       </NavbarBrand>
       <NavbarContent className="sm:flex gap-4 text-white" justify="center">
         {navItemState.map((item, key) => {
