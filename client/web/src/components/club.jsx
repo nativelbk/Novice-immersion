@@ -2,7 +2,7 @@ import React from "react";
 import { HeroParallax } from "../components/hero.parallax";
 
 export function Club() {
-  return <HeroParallax products={products} />;
+  return <div id="club"> <HeroParallax products={products} /></div>;
 }
 export const products = [
   {

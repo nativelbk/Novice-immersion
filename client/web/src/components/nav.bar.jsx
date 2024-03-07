@@ -16,20 +16,19 @@ import { registerCompenentState } from "../utils/states";
 const navItems = [
   {
     label: "Eni immersion",
+    target : "#imersion",
     isSelected: true,
   },
   {
     label: "A propos",
+    target : "#description",
     isSelected: false,
   },
   {
     label: "Partenaires",
+    target : "#club",
     isSelected: false,
-  },
-  {
-    label: "Mentions & Parcours",
-    isSelected: false,
-  },
+  }
 ];
 
 export default function NavBar() {
@@ -68,27 +67,15 @@ export default function NavBar() {
           if (item.isSelected) {
             return (
               <NavbarItem key={key}>
-                <Link
-                  onClick={() => setActiveItem(item)}
-                  className="text-secondary font-semibold"
-                  href="#"
-                >
-                  {item.label}
-                </Link>
+                <Link onClick={()=>setActiveItem(item)} className="text-secondary font-semibold" href={item.target}>{item.label}</Link>
               </NavbarItem>
             );
           } else {
             return (
               <NavbarItem key={key}>
-                <Link
-                  onClick={() => setActiveItem(item)}
-                  className="text-white font-semibold"
-                  href="#"
-                >
-                  {item.label}
-                </Link>
-              </NavbarItem>
-            );
+              <Link  onClick={()=>setActiveItem(item)} className="text-white font-semibold" href={item.target}>{item.label}</Link>
+            </NavbarItem>
+            )
           }
         })}
       </NavbarContent>
