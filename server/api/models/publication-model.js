@@ -8,12 +8,10 @@ const schema = new mongoose.Schema(
       required: [true, "Please provide a description"],
       trim: true,
     },
-    path:
-    {
+    path: {
       type: String,
     },
-    tag:
-    {
+    tag: {
       type: [String],
     },
     category: {
@@ -21,9 +19,11 @@ const schema = new mongoose.Schema(
       required: [true, "Please provide a category"],
     },
     reaction: [{ type: mongoose.Schema.Types.ObjectId, ref: "Reaction" }],
+    comment: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment" }],
+    user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   },
   {
-    timestamps: true
+    timestamps: true,
   }
 );
 

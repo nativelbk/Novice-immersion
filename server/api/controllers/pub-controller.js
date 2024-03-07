@@ -9,15 +9,21 @@ const path = require("path");
 
 const createPub = async (req, res) => {
   const cheminFichier = req.file && req.file.path;
-  const { description, category } = req.body;
+  const { description, category, tag, user } = req.body;
   const result = await pub.create({
     description,
     category,
     path: cheminFichier,
+    tag: [...tag],
+    user,
   });
   res
     .status(201)
     .json({ success: true, message: "Created successfull", pub: result });
+};
+const getPub = async (req, res) => {
+  const data = await pub.find().populate("user");
+  res.status(200).json({ publication: data });
 };
 
 const reagir = async (req, res) => {
@@ -53,4 +59,11 @@ const notification = async (req, res) => {
   });
 };
 
-module.exports = { createPub, reagir, commentaire, createAlert, notification };
+module.exports = {
+  createPub,
+  reagir,
+  commentaire,
+  createAlert,
+  notification,
+  getPub,
+};
