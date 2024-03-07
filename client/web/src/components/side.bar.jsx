@@ -1,6 +1,5 @@
 import { useState } from "react";
 import ModalFormBtn from "./modal";
-import ModalFormBtn from "./modal";
 
 const Menus = [
   { title: "Dashboard", src: "Chart_fill", isSelected: true },
