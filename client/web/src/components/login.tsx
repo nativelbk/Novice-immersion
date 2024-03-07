@@ -47,11 +47,6 @@ export default function Login() {
       };
     });
   };
-  return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input">
-      <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-        Bienvenu chez-nous 
-      </h2>
 
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
@@ -62,6 +57,7 @@ export default function Login() {
       Login to aceternity if you can because we don&apos;t have a login flow
       yet
     </p>
+
     <form className="my-8" onSubmit={handleSubmit}>
       <LabelInputContainer>
         <Label htmlFor="email">E-mail</Label>
@@ -93,6 +89,7 @@ export default function Login() {
         Login &rarr;
         <BottomGradient />
       </button>
+
         <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
 
         <div className="flex flex-col space-y-4">
