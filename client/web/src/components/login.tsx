@@ -147,7 +147,7 @@ export default function Login() {
   );
 }
 
-const BottomGradient = () => {
+export const BottomGradient = () => {
   return (
     <>
       <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-secondary to-transparent" />
@@ -156,7 +156,7 @@ const BottomGradient = () => {
   );
 };
 
-const LabelInputContainer = ({
+export const LabelInputContainer = ({
   children,
   className,
 }: {
