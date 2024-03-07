@@ -8,7 +8,7 @@ export default function Publication({author,content,date}) {
     <Card className="text-gray-300 bg-[#ffffff17] p-5 rounded-xl my-12">
       <CardHeader className="justify-between">
         <div className="flex gap-5">
-          <Avatar isBordered radius="full" size="md" src="/avatars/avatar-1.png" />
+          <Avatar isBordered radius="full" size="lg" src="/avatars/avatar-1.png" />
           <div className="flex flex-col gap-1 items-start justify-center">
             <h4 className="text-small font-semibold leading-none">Zoey Lang</h4>
             <h5 className="text-small tracking-tight">@zoeylang</h5>
