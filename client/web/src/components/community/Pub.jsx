@@ -33,7 +33,7 @@ function Pub() {
                 <button className='coms'>Commenter</button>
             </div>
         </div>
-        
+
 
         <div className='publicity'>
         <div className="profil1">
@@ -81,7 +81,7 @@ function Pub() {
                 vero velit necessitatibus ducimus?
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Fugit veritatis eaque iusto rem alias facere ratione est iste,
-                dicta veniam quis, aliquam praesentium eos distinctio
+                dicta veniam quis,aliquam praesentium eos distinctio
                 </p>
             </div>
             <div className="file">
