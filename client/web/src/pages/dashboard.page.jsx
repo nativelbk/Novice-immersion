@@ -1,5 +1,6 @@
 import Rightbar from "../components/Rightbar";
 import PublicationList from "../components/publication.list";
+import RigthBox from "../components/rigth.box";
 import SideBar from "../components/side.bar";
 import Communaute from "../components/Communaute";
 export default function DashboarPage() {
