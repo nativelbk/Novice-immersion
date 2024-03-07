@@ -59,7 +59,7 @@ export default function ModalFormBtn({ text }) {
         <p>{text}</p>
       </Button>
       <Modal backdrop={`blur`} isOpen={isOpen} onOpenChange={onOpenChange}>
-        <ModalContent className="bg-[#fffefe] rounded-lg">
+        <ModalContent className="rounded-lg text-back bg-white">
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1">Publier</ModalHeader>
@@ -72,11 +72,21 @@ export default function ModalFormBtn({ text }) {
                   }}
                 >
                   <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4"></div>
+                  <LabelInputContainer className="mb-4">
+                    <Label htmlFor="password">Ajouter un fichier</Label>
+                    <Input
+                      onChange={handleChange}
+                      className="py-1 px-2 rounded-sm text-gray-300"
+                      color="tertiary"
+                      id="password"
+                      type="file"
+                    />
+                  </LabelInputContainer>
 
                   <LabelInputContainer className="mb-4">
                     <Label htmlFor="email">Ajouter du texte</Label>
                     <Textarea
-                      className="bg-gray-200 py-2 px-1 rounded-sm"
+                      className="py-1 px-2 rounded-sm"
                       onChange={handleChange}
                       id="email"
                       placeholder="Ajouter du texte"
