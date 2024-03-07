@@ -33,7 +33,8 @@ module.exports = {
       },
     },
   },
-  plugins: [addVariablesForColors],
+  darkMode: "class",
+  plugins: [addVariablesForColors,nextui()],
 };
 
 function addVariablesForColors({ addBase, theme }) {
