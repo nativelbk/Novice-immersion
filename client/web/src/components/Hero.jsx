@@ -8,7 +8,7 @@ import HeroText from './HeroText';
 
 const Hero = () => {
     return (
-        <div className=" h-[80vh] flex justify-center items-center" id="imersion">
+        <div className=" h-[80vh] flex bg-transparent justify-around items-center" id="imersion">
             <Suspense fallback={<div className="text-[50px] absolute text-center ">Loading...</div>}>
                 <main className="pattern1">
 
@@ -20,7 +20,7 @@ const Hero = () => {
                                 </div>
                             </section>
                             <section className=" z-[-3]">
-                                <div className="max-w-[500px] container ">
+                                <div className="max-w-[1000px] container ">
                                     <Spline scene="https://prod.spline.design/4njfpIeQDXBw4PF0/scene.splinecode" />
                                 </div>
                             </section>

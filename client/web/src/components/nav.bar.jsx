@@ -59,11 +59,9 @@ export default function NavBar() {
   };
 
   return (
-    <Navbar maxWidth="2xl" className=" z-[99999999999999] bg-back text-white">
+    <Navbar maxWidth="xl" className=" z-[99999999999999] bg-trnasparent text-white">
       <NavbarBrand>
-        {/* <label htmlFor="">logo</label>
-        <p className="font-bold text-inherit">ENI</p> */}
-        <img className="logo" src="/301233346_455362809937832_3213526383772469179_n.jpg" alt="" />
+       <img src="/logo-no-background.png" alt="" className="w-20 h-12"/>
       </NavbarBrand>
       <NavbarContent className="sm:flex gap-4 text-white" justify="center">
         {navItemState.map((item, key) => {
@@ -99,7 +97,7 @@ export default function NavBar() {
           <Button
             as={Link}
             color="secondary"
-            className="px-4 py-2 rounded-full font-semibold"
+            className="px-4 py-2 rounded-full text-white font-semibold"
             onClick={() => navigateTo("/register", "Login")}
             variant="flat"
           >
@@ -118,5 +116,39 @@ export default function NavBar() {
         </NavbarItem>
       </NavbarContent>
     </Navbar>
+    // <Navbar className="bg-transparent">
+    //   <NavbarBrand >
+    //     {/* <AcmeLogo /> */}
+    //     <p className="font-bold text-inherit">ACME</p>
+    //   </NavbarBrand>
+    //   <NavbarContent className="hidden sm:flex gap-4" justify="center">
+    //     <NavbarItem>
+    //       <Link color="foreground" href="#">
+    //         Features
+    //       </Link>
+    //     </NavbarItem>
+    //     <NavbarItem isActive>
+    //       <Link href="#" aria-current="page">
+    //         Customers
+    //       </Link>
+    //     </NavbarItem>
+    //     <NavbarItem>
+    //       <Link color="foreground" href="#">
+    //         Integrations
+    //       </Link>
+    //     </NavbarItem>
+    //   </NavbarContent>
+    //   <NavbarContent justify="end">
+    //     <NavbarItem className="hidden lg:flex">
+    //       <Link href="#">Login</Link>
+    //     </NavbarItem>
+    //     <NavbarItem>
+    //       <Button as={Link} color="primary" href="#" variant="flat">
+    //         Sign Up
+    //       </Button>
+    //     </NavbarItem>
+    //   </NavbarContent>
+    // </Navbar>
+
   );
 }
