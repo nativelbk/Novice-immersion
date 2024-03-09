@@ -47,9 +47,6 @@
   background: grey; 
 }
 
-.input-comment {
-  background-color: black;
-}
 .comment-element{
   @apply w-full my-4 flex items-center justify-start
 }

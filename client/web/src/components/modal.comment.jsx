@@ -13,7 +13,7 @@ import {
   Textarea,
 } from "@nextui-org/react";
 import axios from "axios";
-import { IconPlus } from "@tabler/icons-react";
+import { IconMessage, IconPlus } from "@tabler/icons-react";
 import { BottomGradient, LabelInputContainer } from "./login";
 import { Label } from "@radix-ui/react-label";
 import { FaRegComment } from "react-icons/fa";
@@ -37,7 +37,7 @@ export default function ModalComment() {
   return (
     <>
       <button onClick={onOpen}>
-        <FaRegComment />
+        <IconMessage />
       </button>
       <Modal backdrop={`blur`} isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent className="bg-[#fffefe] rounded-lg">
