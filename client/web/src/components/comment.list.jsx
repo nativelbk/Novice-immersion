@@ -4,7 +4,7 @@ import icon4 from "../assets/icon (4).png";
 
 export default function CommentList() {
   return (
-    <div className="h-48 overflow-y-auto overflow-x-hidden bg-gray-100 px-2">
+    <div className="h-48 overflow-y-auto overflow-x-hidden bg-[#2d2d2d6b] rounded-lg px-2">
         <CommenteElement img={icon4} author="Moi" comment="bonjourvjnevhirehgwenfkndcvhuidshfwejkfnw"/>
         <CommenteElement img={icon4} author="Moi" comment="bonjourvjnevhirehgwenfkndcvhuidshfwejkfnw"/>
         <CommenteElement img={icon4} author="Moi" comment="bonjourvjnevhirehgwenfkndcvhuidshfwejkfnw"/>
