@@ -11,20 +11,20 @@ import {
   useDisclosure,
   Input,
   Textarea,
+  Card,
+  CardBody,
+  Image,
 } from "@nextui-org/react";
 import axios from "axios";
-import { IconPlus } from "@tabler/icons-react";
+import { IconMessage, IconPlus } from "@tabler/icons-react";
 import { BottomGradient, LabelInputContainer } from "./login";
 import { Label } from "@radix-ui/react-label";
-import LoadingBtn from "./loading.btn";
+import icon1 from "../assets/icon (1).png";
 
 // eslint-disable-next-line react/prop-types
-export default function ModalFormBtn({ text }) {
+export default function ModalAlert() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [login, setLogin] = useState({ user: localStorage.getItem("id") });
-
-  const [btnState, setBtnState] = useState("idle");
-
   const handleChange = (e) => {
     setLogin((val) => {
       return {
@@ -34,44 +34,36 @@ export default function ModalFormBtn({ text }) {
     });
   };
 
-  const handleSubmit = async (e) => {
-    console.log(login);
-    try {
-      setBtnState("loading");
-      const data = await axios.post(
-        "http://localhost:5000/api/create-pub",
-        login
-      );
-    } catch (error) {
-    } finally {
-      setBtnState("success");
-    }
-    console.log(data);
-  };
+  const handleSubmit = async (e) => {};
 
   return (
     <>
-      <Button
-        className="py-2 px-4 bg-primary text-back rounded-full w-full"
-        onPress={onOpen}
+      <div className="w-20 h-20 rounded-full p-4 bg-secondary">
+        <Card shadow="sm" isPressable onPress={onOpen}>
+          <CardBody className="overflow-visible p-0">
+            <Image
+              shadow="sm"
+              radius="full"
+              className="object-contain"
+              src={icon1}
+            />
+          </CardBody>
+        </Card>
+      </div>
+      <Modal
+        size="2xl"
+        backdrop={`blur`}
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
       >
-        <IconPlus className="font-bold mx-2" />
-        <p>{text}</p>
-      </Button>
-      <Modal backdrop={`blur`} isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent className="bg-back rounded-lg text-gray-300">
-          {(onClose) => (
+          {() => (
             <>
-              <ModalHeader className="flex flex-col gap-1">Publier</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1">
+                Creer une alerte
+              </ModalHeader>
               <ModalBody>
-                <form
-                  method="post"
-                  className="my-8"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                  }}
-                >
-                  <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4"></div>
+                <form method="post" className="mt-2" onSubmit={handleSubmit}>
                   <LabelInputContainer className="mb-4">
                     <Label htmlFor="password">Ajouter un fichier</Label>
                     <input
@@ -84,7 +76,7 @@ export default function ModalFormBtn({ text }) {
                   </LabelInputContainer>
 
                   <LabelInputContainer className="mb-4">
-                    <Label htmlFor="email">Ajouter du texte</Label>
+                    <Label htmlFor="email">Laiser un commentaire</Label>
                     <textarea
                       className="bg-tertiary py-2 px-1 rounded-sm"
                       onChange={handleChange}
@@ -94,15 +86,13 @@ export default function ModalFormBtn({ text }) {
                       name="description"
                     />
                   </LabelInputContainer>
-
-                  <LoadingBtn
-                    className="bg-secondary relative group/btn w-full text-zinc-800 rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-                    handler={handleSubmit}
-                    state={btnState}
+                  <button
+                    className="bg-secondary mb-4 relative group/btn w-full text-zinc-800 rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+                    type="submit"
                   >
-                    Publier &rarr;
+                    Alerter &rarr;
                     <BottomGradient />
-                  </LoadingBtn>
+                  </button>
                 </form>
               </ModalBody>
             </>
