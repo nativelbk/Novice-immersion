@@ -1,6 +1,6 @@
 /** @format */
-
-import React, { useState } from "react";
+import axios from "axios"
+import React, { useEffect, useState } from "react";
 import {
   Card,
   CardHeader,
@@ -28,17 +28,29 @@ export default function Publication({
   const [isFollowed, setIsFollowed] = React.useState(false);
   const [react, setReact] = useState(0);
   const [isLoved, setIsLoved] = useState(false);
+  const [nbre,setNbre] = useState("")
+
+  useEffect(()=>
+  {
+
+    setInterval(coms,30)
+    
+  },[])
+
+  const coms=async()=>
+  {
+    const coms = await axios.get(`http://localhost:5000/api/commentaire`)
+    const effectif = coms.data.commentaire
+    const n = effectif.length
+    console.log(effectif);
+    setNbre(n)
+  }
 
   return (
     <Card className="text-gray-300 bg-[#ffffff17] p-5 rounded-xl my-12">
       <CardHeader className="justify-between">
         <div className="flex gap-5">
-          <Avatar
-            isBordered
-            radius="full"
-            size="lg"
-            src="/avatars/avatar-1.png"
-          />
+          <Avatar isBordered radius="full" size="lg" src={sary} />
           <div className="flex flex-col gap-1 items-start justify-center">
             <h4 className="text-small font-semibold leading-none">
               {user?.username}
@@ -85,7 +97,9 @@ export default function Publication({
           </div>
         )}
         <div className="flex gap-1">
-          <ModalComment /> {comment && comment.length}
+          <ModalComment/>{" "}
+          {/* {comment && comment.length} */}
+          {nbre || 0}
         </div>
       </CardFooter>
       <p className="text-xs text-gray-400 ml-2 underline mb-2">

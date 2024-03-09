@@ -5,10 +5,43 @@ export const parcoursEni = {
  IG : {
     title: `Informatique Générale`,
     icon : gbIcon,
+    explaint:"Une personne ayant suivi des études en Informatique Générale peut avoir accès à une variété de métiers dans le domaine de l'informatique",
     content: `Ingénieur en système d’information : Concevoir, développer, tester et maintenir des applications logicielles pour répondre aux besoins des utilisateurs ou des clients.
     Ingénieur en systèmes d'information : Concevoir, mettre en œuvre et gérer des systèmes informatiques complets pour soutenir les opérations d'une organisation.
     `,
   },
+  GB : {
+    title: `Génie Logiciel et base de données`,
+    icon : gbIcon,
+    explaint:"Une personne ayant suivi des études en Génie Logiciel et Base de données peut accéder à une variété de métiers liés au développement de logiciels, à la gestion de bases de données et à la conception de systèmes d'information.",
+    content: `Ingénieur en système d’information : Concevoir, développer, tester et maintenir des applications logicielles pour répondre aux besoins des utilisateurs ou des clients.
+    Ingénieur en systèmes d'information : Concevoir, mettre en œuvre et gérer des systèmes informatiques complets pour soutenir les opérations d'une organisation.
+    `,
+  },
+  ASR : {
+    title: `Administration de systeme et réseau`,
+    icon : gbIcon,
+    explaint:"Gérer et maintenir les systèmes informatique d’une organisation, assure leur disponibilité, leur stabilité et leur performance",
+    content: `Ingénieur en système d’information : Concevoir, développer, tester et maintenir des applications logicielles pour répondre aux besoins des utilisateurs ou des clients.
+    Ingénieur en systèmes d'information : Concevoir, mettre en œuvre et gérer des systèmes informatiques complets pour soutenir les opérations d'une organisation.
+    `,
+  },
+  GID : {
+    title: `Governance et Ingénierie de données`,
+    icon : gbIcon,
+    explaint:"Gouvernance et Ingénierie des données : Une personne ayant suivi des études en Gouvernance et Ingénierie des données peut occuper divers postes liés à la gestion, l'analyse et la sécurité des données au sein d'une organisation.",
+    content: `Ingénieur en système d’information : Concevoir, développer, tester et maintenir des applications logicielles pour répondre aux besoins des utilisateurs ou des clients.
+    Ingénieur en systèmes d'information : Concevoir, mettre en œuvre et gérer des systèmes informatiques complets pour soutenir les opérations d'une organisation.
+    `,
+  },
+  OCC : {
+    title: `Objet Connecté et Cybersécurité`,
+    icon : gbIcon,
+    explaint:"Une personne ayant suivi des études en objets connectés et cybersécurité peut exercer plusieurs métiers liés à ces domaines en constante évolution",
+    content: `Ingénieur en système d’information : Concevoir, développer, tester et maintenir des applications logicielles pour répondre aux besoins des utilisateurs ou des clients.
+    Ingénieur en systèmes d'information : Concevoir, mettre en œuvre et gérer des systèmes informatiques complets pour soutenir les opérations d'une organisation.
+    `,
+  }
 }
 
 export const imageSliders = [

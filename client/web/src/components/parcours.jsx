@@ -9,7 +9,7 @@ export default function Parcours() {
       value: "GB",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-xl md:text-4xl font-bold text-white bg-[#2D2D2D]">
-          <DummyContent element={parcoursEni.IG} />
+          <DummyContent element={parcoursEni.GB} />
         </div>
       ),
     },
@@ -27,7 +27,7 @@ export default function Parcours() {
       value: "ASR",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-xl md:text-4xl font-bold text-white bg-[#2D2D2D]">
-          <DummyContent element={parcoursEni.IG} />
+          <DummyContent element={parcoursEni.ASR} />
         </div>
       ),
     },
@@ -36,7 +36,8 @@ export default function Parcours() {
       value: "OCC",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-xl md:text-4xl font-bold text-white bg-[#2D2D2D]">
-          <DummyContent element={parcoursEni.IG} />
+          <p className="explaint">{parcoursEni.explaint}</p>
+          <DummyContent element={parcoursEni.OCC} />
         </div>
       ),
     },
@@ -45,7 +46,7 @@ export default function Parcours() {
       value: "GID",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 md:text-4xl font-bold text-white bg-[#2D2D2D]">
-          <DummyContent element={parcoursEni.IG} />
+          <DummyContent element={parcoursEni.GID} />
         </div>
       ),
     },
@@ -63,6 +64,7 @@ const DummyContent = ({ element }) => {
     <div className="text-sm">
       <img src={element.icon} alt="" className="px-10"/>
       <p className=" text-secondary text-xl text-center mb-4">{element.title}</p>
+      <p className="explaint">{element.explaint}</p>
       <p className=" font-normal">{element.content}</p>
     </div>
   );

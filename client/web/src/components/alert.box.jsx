@@ -5,6 +5,7 @@ import icon2 from "../assets/icon (2).png";
 import icon3 from "../assets/icon (5).png";
 import icon4 from "../assets/icon (4).png";
 import AlertIconBox from "./alertIcon.box";
+import ModalAlert from "./modal.alert";
 
 export default function AlertBox() {
   return (
@@ -16,22 +17,7 @@ export default function AlertBox() {
       <div className="flex items-center justify-center">
         <div className="w-48 h-48 grid grid-cols-2 grid-rows-2 gap-8 mt-4">
           <div className="flex items-center justify-center">
-            <div className="w-20 h-20 rounded-full p-4 bg-secondary">
-              <Card
-                shadow="sm"
-                isPressable
-                onPress={() => console.log("item pressed")}
-              >
-                <CardBody className="overflow-visible p-0">
-                  <Image
-                    shadow="sm"
-                    radius="full"
-                    className="object-contain"
-                    src={icon1}
-                  />
-                </CardBody>
-              </Card>
-            </div>
+            <ModalAlert/>
           </div>
           <div className="flex items-center justify-center">
             <div className="w-20 h-20 rounded-full p-4 bg-ii">

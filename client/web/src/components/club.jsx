@@ -13,29 +13,29 @@ export function Club() {
 }
 export const products = [
   {
-    title: "Moonbeam",
+    title: "DATA STRUCTURE ET ALGORITHMIQUE",
     link: "https://gomoonbeam.com",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+      "/421098941_3636269273257470_4682424497382221824_n (1).jpeg",
   },
   {
-    title: "Cursor",
+    title: "C2E",
     link: "https://cursor.so",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+      "/260521260_1246865695821725_5812808942849919391_n.jpg",
   },
   {
-    title: "Rogue",
+    title: "C3LF",
     link: "https://userogue.com",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+      "/263702514_2076394149179758_6687160484936918402_n.jpeg",
   },
 
   {
-    title: "Editorially",
+    title: "CyberSecurity",
     link: "https://editorially.org",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+      "/354453819_5922164767911882_4745276203586416912_n.jpg",
   },
   {
     title: "Editrix AI",
@@ -44,29 +44,29 @@ export const products = [
       "https://aceternity.com/images/products/thumbnails/new/editrix.png",
   },
   {
-    title: "Pixel Perfect",
+    title: "CODE CLOUD",
     link: "https://app.pixelperfect.quest",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+      "/421548266_122096935898200957_4728144964331522209_n.jpg",
   },
 
   {
-    title: "Algochurn",
+    title: "CyberSec CODE CLOUD",
     link: "https://algochurn.com",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+      "/429666674_122119647872200957_7661764682502938047_n.jpg",
   },
   {
-    title: "Aceternity UI",
+    title: "DATA STRUCTURE ET ALGORITHME CLUB",
     link: "https://ui.aceternity.com",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+      "/421098941_3636269273257470_4682424497382221824_n (1).jpeg",
   },
   {
-    title: "Tailwind Master Kit",
+    title: "CODE CLOUD",
     link: "https://tailwindmasterkit.com",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+      "/421548266_122096935898200957_4728144964331522209_n.jpg",
   },
   {
     title: "SmartBridge",
