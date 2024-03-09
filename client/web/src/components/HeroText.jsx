@@ -16,14 +16,11 @@ const HeroText = () => {
         où l'innovation et l'excellence sont au cœur de chaque expérience
       </h2>
       <div className="flex justify-between ">
-        <Button color="secondary" variant="solid" className="w-[290px]">
-          Commencer
-        </Button>
         <Button
           variant="bordered"
           className="w-[290px] border-pink text-pink font-bold "
         >
-          Decouvrir
+          Commencer
         </Button>
       </div>
     </div>
