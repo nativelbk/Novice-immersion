@@ -107,10 +107,16 @@ export const Header = () => {
       <h1 className="text-2xl md:text-7xl font-bold text-primary">
         Clubs , <br /> Association de l'AEENI
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
+      <p className="max-w-2xl text-white md:text-xl mt-8 ">
+        Découvrez la diversité et l'énergie des clubs de l'ENI, où vous pouvez
+        explorer vos passions, rencontrer des personnes partageant les mêmes
+        idées et vous engager dans des activités stimulantes en dehors des
+        salles de classe. Que vous soyez intéressé par le leadership, la
+        créativité, le sport, la technologie ou la culture, il y a un club pour
+        vous à l'ENI. Rejoignez-nous pour élargir vos horizons, développer de
+        nouvelles compétences et tisser des liens forts avec votre communauté
+        étudiante. Ensemble, nous formons une toile dynamique d'opportunités
+        pour tous les étudiants de l'ENI.
       </p>
     </div>
   );

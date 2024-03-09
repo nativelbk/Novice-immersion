@@ -15,35 +15,37 @@ import { registerCompenentState } from "../utils/states";
 
 const navItems = [
   {
-    label: "Eni immersion",
-    target : "#imersion",
+    label: "Accueil",
+    target: "#imersion",
     isSelected: true,
   },
   {
     label: "A propos",
-    target : "#description",
+    target: "#description",
     isSelected: false,
   },
   {
-    label: "Partenaires",
-    target : "#club",
+    label: "Club",
+    target: "#club",
     isSelected: false,
-  }
+  },
 ];
 
 export default function NavBar() {
   const [navItemState, setNavItemState] = useState(navItems);
-  const [current_register_component, setCRC] = useRecoilState(registerCompenentState);
-  const navigate = useNavigate()
+  const [current_register_component, setCRC] = useRecoilState(
+    registerCompenentState
+  );
+  const navigate = useNavigate();
 
-  const navigateTo = (path,action)=>{
-    if(action == "Signin") {
-      setCRC("SignIn")
+  const navigateTo = (path, action) => {
+    if (action == "Signin") {
+      setCRC("SignIn");
     } else {
-      setCRC("Login")
+      setCRC("Login");
     }
-    navigate(path)
-  }
+    navigate(path);
+  };
 
   const setActiveItem = (item) => {
     const items = navItemState.map((i) => {
@@ -67,15 +69,27 @@ export default function NavBar() {
           if (item.isSelected) {
             return (
               <NavbarItem key={key}>
-                <Link onClick={()=>setActiveItem(item)} className="text-secondary font-semibold" href={item.target}>{item.label}</Link>
+                <Link
+                  onClick={() => setActiveItem(item)}
+                  className="text-secondary font-semibold"
+                  href={item.target}
+                >
+                  {item.label}
+                </Link>
               </NavbarItem>
             );
           } else {
             return (
               <NavbarItem key={key}>
-              <Link  onClick={()=>setActiveItem(item)} className="text-white font-semibold" href={item.target}>{item.label}</Link>
-            </NavbarItem>
-            )
+                <Link
+                  onClick={() => setActiveItem(item)}
+                  className="text-white font-semibold"
+                  href={item.target}
+                >
+                  {item.label}
+                </Link>
+              </NavbarItem>
+            );
           }
         })}
       </NavbarContent>
@@ -85,7 +99,7 @@ export default function NavBar() {
             as={Link}
             color="secondary"
             className="px-4 py-2 rounded-full font-semibold"
-            onClick={()=>navigateTo("/register" , "Login")}
+            onClick={() => navigateTo("/register", "Login")}
             variant="flat"
           >
             Se connecter
@@ -96,7 +110,7 @@ export default function NavBar() {
             className="bg-secondary text-black px-4 py-2 rounded-full font-semibold"
             as={Link}
             variant="flat"
-            onClick={()=>navigateTo("/register" , "Signin")}
+            onClick={() => navigateTo("/register", "Signin")}
           >
             S'inscrire
           </Button>

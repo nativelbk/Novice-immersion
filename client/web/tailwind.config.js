@@ -4,7 +4,7 @@
 import { nextui } from "@nextui-org/react";
 
 const defaultTheme = require("tailwindcss/defaultTheme");
- 
+
 const colors = require("tailwindcss/colors");
 const {
   default: flattenColorPalette,
@@ -21,12 +21,14 @@ module.exports = {
     extend: {
       colors: {
         ii: "#52a7ffe3",
-        iii : "#ff004d",
-        iiii : "#ffbc00",
+        iii: "#ff004d",
+        iiii: "#ffbc00",
         primary: "#A3FDA1",
         secondary: "#925FF0",
         tertiary: "#2D2D2D",
         back: "#0B0B0B",
+        txt: "rgba(255, 255, 255, 0.675)",
+        pink: "rgba(231, 32, 198, 0.796)",
       },
       fontFamily: {
         body: ["Gabarito"],
@@ -37,7 +39,7 @@ module.exports = {
     },
   },
   darkMode: "class",
-  plugins: [addVariablesForColors,nextui()],
+  plugins: [addVariablesForColors, nextui()],
 };
 
 function addVariablesForColors({ addBase, theme }) {
@@ -45,7 +47,7 @@ function addVariablesForColors({ addBase, theme }) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });
@@ -53,4 +55,3 @@ function addVariablesForColors({ addBase, theme }) {
 
 export const darkMode = "class";
 export const plugins = [nextui()];
-
