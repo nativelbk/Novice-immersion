@@ -8,9 +8,12 @@ import {
   CardFooter,
   Avatar,
   Button,
+  Input,
 } from "@nextui-org/react";
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegComment } from "react-icons/fa";
+import "../index.css";
+import ModalComment from "./modal.comment";
 
 export default function Publication({
   author,
@@ -56,12 +59,13 @@ export default function Publication({
           {reaction && reaction.length}
         </div>
         <div className="flex gap-1">
-          <button>
-            <FaRegComment />
-          </button>{" "}
+          <ModalComment/>{" "}
           {comment && comment.length}
         </div>
       </CardFooter>
+      <form >
+        <Input className="input-comment" />
+      </form>
     </Card>
   );
 }
