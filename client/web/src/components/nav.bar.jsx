@@ -59,7 +59,7 @@ export default function NavBar() {
   };
 
   return (
-    <Navbar maxWidth="lg" className=" z-[99999999999999] bg-trnasparent text-white">
+    <Navbar maxWidth="xl" className=" z-[99999999999999] bg-trnasparent text-white">
       <NavbarBrand>
        <img src="/logo-no-background.png" alt="" className="w-20 h-12"/>
       </NavbarBrand>

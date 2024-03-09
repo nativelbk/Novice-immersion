@@ -3,7 +3,7 @@ import { SparklesCore } from "./spartkle";
 
 export function SparklesPreview() {
     return (
-        <div className="h-[40rem] absolute top-0 z-[-2] bg-tertiary  w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
+        <div className="h-[40rem] absolute top-0 z-[-2]   w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
             <div className="w-full  inset-0 h-screen">
                 <SparklesCore
                     id="tsparticlesfullpage"
