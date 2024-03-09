@@ -45,16 +45,15 @@ export default function SignIn() {
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-        Welcome to Aceternity
+        Bienvenu
       </h2>
       <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-        Login to aceternity if you can because we don&apos;t have a login flow
-        yet
+        Créez votre compte et intégrez une communauté active.
       </p>
 
       <form className="my-8" onSubmit={handleSubmit}>
         <LabelInputContainer>
-          <Label htmlFor="firstname">Full name</Label>
+          <Label htmlFor="firstname">Nom et Prénom *</Label>
           <Input
             onChange={handleChange}
             id="firstname"
@@ -65,7 +64,7 @@ export default function SignIn() {
           />
         </LabelInputContainer>
         <LabelInputContainer className="mt-4">
-          <Label htmlFor="email">Email Address</Label>
+          <Label htmlFor="email">Email *</Label>
           <Input
             onChange={handleChange}
             id="email"
@@ -76,7 +75,7 @@ export default function SignIn() {
           />
         </LabelInputContainer>
         <LabelInputContainer className="mt-4">
-          <Label htmlFor="password">Password</Label>
+          <Label htmlFor="password">Mot de passe *</Label>
           <Input
             onChange={handleChange}
             id="password"
@@ -88,10 +87,11 @@ export default function SignIn() {
         </LabelInputContainer>
 
         <button
-          className="bg-gradient-to-br relative group/btn mt-4 from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+          className="bg-gradient-to-br relative group/btn mt-4 text-back bg-secondary w-full rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+          className="bg-gradient-to-br relative group/btn mt-4 text-back bg-secondary w-full rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"
         >
-          Sign up &rarr;
+          Créez votre compte &rarr;
           <BottomGradient />
         </button>
 

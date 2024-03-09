@@ -16,10 +16,12 @@ import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const navigate = useNavigate();
+
   const [login, setLogin] = useState<{
     email: "";
     password: "";
   }>({ email: "", password: "" });
+
   const [authorization, setAuthorization] = useRecoilState(authenticatedState);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -37,6 +39,7 @@ export default function Login() {
       setAuthorization(false);
     }
   };
+
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setLogin((val) => {
       return {
@@ -45,62 +48,46 @@ export default function Login() {
       };
     });
   };
+
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input">
-      <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-        Welcome back
+      <h2 className="font-bold text-xl text-neutral-200">
+        Heureux de vous revoir !
       </h2>
-      <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-        Login to aceternity if you can because we don&apos;t have a login flow
-        yet
+      <p className="text-neutral-400 text-sm max-w-sm mt-2 dark">
+        Veuillez vous connecter et poursuivre votre merveilleuse aventure dans
+        la communauté.
       </p>
 
-      {/* TODO: Add moving gradient maybe maybe? */}
-      {/* content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: var(--line-width);
-    background: conic-gradient(from calc(var(--angle) + var(--start-angle)), transparent 0, var(--line-color) 20%, transparent 25%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: xor;
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    animation: inherit;
-
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    filter: drop-shadow(0 0 10px var(--line-color)); */}
-      <form className="my-8" onSubmit={handleSubmit}>
-        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4"></div>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
-          <Input
-            onChange={handleChange}
-            id="email"
-            placeholder="projectmayhem@fc.com"
-            type="email"
-            name="email"
-          />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="password">Password</Label>
-          <Input
-            onChange={handleChange}
-            id="password"
-            placeholder="••••••••"
-            type="password"
-            name="password"
-          />
-        </LabelInputContainer>
+    <form className="my-8" onSubmit={handleSubmit}>
+      <LabelInputContainer>
+        <Label htmlFor="email">E-mail</Label>
+        <Input
+          onChange={handleChange}
+          id="email"
+          placeholder="ralyandrynyainakadmiel@gmail.com"
+          type="text"
+          name="email"
+          required
+        />
+      </LabelInputContainer>
+      <LabelInputContainer className="mt-4">
+        <Label htmlFor="password">Password</Label>
+        <Input
+          onChange={handleChange}
+          id="password"
+          placeholder="••••••••"
+          name="password"
+          type="password"
+          required
+        />
+      </LabelInputContainer>
 
         <button
           className="bg-secondary relative group/btn w-full text-zinc-800 rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"
         >
-          Login &rarr;
+          Se connecter &rarr;
           <BottomGradient />
         </button>
 

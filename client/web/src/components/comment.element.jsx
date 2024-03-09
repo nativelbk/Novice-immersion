@@ -8,7 +8,7 @@ export default function CommenteElement({ img, author, comment }) {
       />
       <div className=" flex-col ">
         <p>{author}</p>
-        <div className="bg-gray-300 rounded-tr-md rounded-br-md rounded-bl-md p-1">
+        <div className="bg-[#2d2d2d6b] rounded-tr-md rounded-br-md rounded-bl-md p-1">
           <p className="text-sm">
             {comment}
           </p>

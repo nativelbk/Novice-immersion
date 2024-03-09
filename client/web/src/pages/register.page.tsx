@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useEffect, useState } from "react";
 import { ImagesSlider } from "../components/image.slider";
 import { motion } from "framer-motion";
@@ -14,12 +16,14 @@ const components = {
 
 export function RegisterPage() {
   const [text, setText] = useState("Sign up");
-  const [current_register_component, setCRC] = useRecoilState(registerCompenentState);
+  const [current_register_component, setCRC] = useRecoilState(
+    registerCompenentState
+  );
   useEffect(() => {
     if (current_register_component == "SignIn") {
-      setText("Login");
+      setText("Se connecter");
     } else {
-      setText("Sign up");
+      setText("S'inscrir");
     }
   }, [current_register_component]);
 
@@ -53,7 +57,7 @@ export function RegisterPage() {
           className="z-50 flex flex-col justify-center items-center"
         >
           <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
-            The hero section slideshow <br /> nobody asked for
+            Aidez la communauté à s'agrandir
           </motion.p>
           <button
             onClick={swapComponent}

@@ -14,7 +14,7 @@ import {
   input,
 } from "@nextui-org/react";
 import axios from "axios";
-import { IconPlus } from "@tabler/icons-react";
+import { IconMessage, IconPlus } from "@tabler/icons-react";
 import { BottomGradient, LabelInputContainer } from "./login";
 import { Label } from "@radix-ui/react-label";
 import { FaRegComment } from "react-icons/fa";
@@ -50,10 +50,10 @@ export default function ModalComment() {
   return (
     <>
       <button onClick={onOpen}>
-        <FaRegComment />
+        <IconMessage />
       </button>
-      <Modal backdrop={`blur`} isOpen={isOpen} onOpenChange={onOpenChange}>
-        <ModalContent className="bg-[#fffefe] rounded-lg">
+      <Modal size="2xl" backdrop={`blur`} isOpen={isOpen} onOpenChange={onOpenChange}>
+        <ModalContent className="bg-back rounded-lg text-gray-300">
           {() => (
             <>
               <ModalHeader className="flex flex-col gap-1">Commentaires</ModalHeader>
@@ -63,8 +63,8 @@ export default function ModalComment() {
                   <div className=""></div>
                   <LabelInputContainer className="mb-4">
                     <Label htmlFor="email">Laiser un commentaire</Label>
-                    <Textarea
-                      className="bg-gray-200 py-2 px-1 rounded-sm"
+                    <textarea
+                      className="bg-tertiary py-2 px-1 rounded-sm"
                       onChange={handleChange}
                       id="email"
                       placeholder="Ajouter du texte"
@@ -73,7 +73,7 @@ export default function ModalComment() {
                     />
                   </LabelInputContainer>
                   <button
-                    className="bg-secondary relative group/btn w-full text-zinc-800 rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+                    className="bg-secondary mb-4 relative group/btn w-full text-zinc-800 rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
                     type="submit"
                   >
                     Commenter &rarr;
