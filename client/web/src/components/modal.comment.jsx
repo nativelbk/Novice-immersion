@@ -11,6 +11,7 @@ import {
   useDisclosure,
   Input,
   Textarea,
+  input,
 } from "@nextui-org/react";
 import axios from "axios";
 import { IconPlus } from "@tabler/icons-react";
@@ -18,21 +19,33 @@ import { BottomGradient, LabelInputContainer } from "./login";
 import { Label } from "@radix-ui/react-label";
 import { FaRegComment } from "react-icons/fa";
 import CommentList from "./comment.list";
+import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 export default function ModalComment() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const [login, setLogin] = useState({ user: localStorage.getItem("id") });
+  const [comment, setComment] = useState('')
+  // const [login, setLogin] = useState({ user: localStorage.getItem("id") });
+  const [input,setInput] = useState([])
+  const navigate = useNavigate()
+
   const handleChange = (e) => {
-    setLogin((val) => {
-      return {
-        ...val,
-        [e.target.name]: e.target.value,
-      };
-    });
+    // setLogin((val) => {
+    const name = e.target.name;
+    const value = e.target.value
+    setComment(value)
+    setInput(values=>({...values,[name]:value}))
+    // });
   };
 
-  const handleSubmit = async (e) => {};
+  const handleSubmit = async (e) =>
+  {
+    e.preventDefault()
+    await axios.post("http://localhost:5000/api/commentaire",input)
+    console.log(input);
+    navigate("/dashboard")
+    setComment("")
+  };
 
   return (
     <>
@@ -46,7 +59,7 @@ export default function ModalComment() {
               <ModalHeader className="flex flex-col gap-1">Commentaires</ModalHeader>
               <ModalBody>
                 <CommentList />
-                <form method="post" className="mt-2" onSubmit={handleSubmit}>
+                <form className="mt-2" onSubmit={handleSubmit}>
                   <div className=""></div>
                   <LabelInputContainer className="mb-4">
                     <Label htmlFor="email">Laiser un commentaire</Label>
@@ -55,8 +68,8 @@ export default function ModalComment() {
                       onChange={handleChange}
                       id="email"
                       placeholder="Ajouter du texte"
-                      type="email"
-                      name="description"
+                      value={comment}
+                      name="text"
                     />
                   </LabelInputContainer>
                   <button

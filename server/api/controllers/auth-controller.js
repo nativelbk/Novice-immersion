@@ -27,4 +27,11 @@ const register = async (req, res) => {
     .json({ success: true, token: token, id: user._id });
 };
 
-module.exports = { login, register };
+const utilisateur = async(req,res)=>
+{
+  const id = req.params.id
+  const users = await model.findById({_id:id})
+  res.status(200).json(users)
+}
+
+module.exports = { login, register,utilisateur };

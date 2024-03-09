@@ -1,6 +1,6 @@
 /** @format */
-
-import React from "react";
+import axios from "axios"
+import React, { useEffect, useState } from "react";
 import {
   Card,
   CardHeader,
@@ -24,6 +24,23 @@ export default function Publication({
   description,
 }) {
   const [isFollowed, setIsFollowed] = React.useState(false);
+  const [nbre,setNbre] = useState("")
+
+  useEffect(()=>
+  {
+
+    setInterval(coms,30)
+    
+  },[])
+
+  const coms=async()=>
+  {
+    const coms = await axios.get(`http://localhost:5000/api/commentaire`)
+    const effectif = coms.data.commentaire
+    const n = effectif.length
+    console.log(effectif);
+    setNbre(n)
+  }
 
   return (
     <Card className="text-gray-300 bg-[#ffffff17] p-5 rounded-xl my-12">
@@ -60,7 +77,8 @@ export default function Publication({
         </div>
         <div className="flex gap-1">
           <ModalComment/>{" "}
-          {comment && comment.length}
+          {/* {comment && comment.length} */}
+          {nbre || 0}
         </div>
       </CardFooter>
       <form >
