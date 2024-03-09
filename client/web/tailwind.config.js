@@ -29,6 +29,7 @@ module.exports = {
         back: "#0B0B0B",
         txt: "rgba(255, 255, 255, 0.675)",
         pink: "rgba(231, 32, 198, 0.796)",
+        orBack : "#18181b"
       },
       fontFamily: {
         body: ["Gabarito"],

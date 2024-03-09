@@ -5,7 +5,7 @@ import { dashMenuState } from "../utils/states";
 
 const Menus = [
   // { title: "Dashboard", src: "Chart_fill", isSelected: true },
-  { title: "Orientantion ", src: "Calendar", isSelected: false ,value : "Orientation"},
+  { title: "Orientantion ", src: "Calendar", isSelected: true ,value : "Orientation"},
   { title: "Communauté", src: "Chat", isSelected: false, value : "PublicationList"},
   // { title: "Orientantion", src: "Search", isSelected: false },
   { title: "Compte", src: "User", gap: false, isSelected: false },
@@ -33,8 +33,8 @@ export default function SideBar() {
 
   return (
     <div
-      className={` ${open ? "w-72" : "w-20 "
-        } bg-dark-purple h-screen p-5  pt-8 relative duration-300`}
+      className={` ${open ? "w-full" : "w-20 "
+        } bg-orBack h-screen p-5  pt-8 relative duration-300`}
     >
       <img
         src="./src/assets/control.png"
@@ -49,7 +49,7 @@ export default function SideBar() {
             }`}
         />
         <h1
-          className={`text-white origin-left font-medium text-xl duration-200 ${!open && "scale-0"
+          className={` origin-left font-medium text-xl duration-200 ${!open && "scale-0"
             }`}
         >
           ENI Emerssion

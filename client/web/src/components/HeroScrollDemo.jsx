@@ -7,14 +7,14 @@ export function HeroScrollDemo() {
             <ContainerScroll
                 users={users}
                 titleComponent={
-                    <>
-                        <h1 className="text-4xl font-semibold text-white dark:text-white">
+                    <div className="p-8 rounded-xl">
+                        <h1 className="text-4xl font-semibold">
                             Les debouches populaires en  <br />
                             <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
                                 Informatiques
                             </span>
                         </h1>
-                    </>
+                    </div>
                 }
             />
         </div>

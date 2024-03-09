@@ -16,7 +16,7 @@ export default function DashboarPage() {
     const DynamicComponent = components[dashMenuItem[0]] || <div>NOt FOund</div>
 
     return (
-        <div className=" grid grid-cols-5 h-screen">
+        <div className=" grid grid-cols-6 h-screen text-gray-300">
             <SideBar />            
             <DynamicComponent/>
             <RigthBox/>
