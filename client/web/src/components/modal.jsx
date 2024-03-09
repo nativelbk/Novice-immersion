@@ -83,6 +83,20 @@ export default function ModalFormBtn({ text }) {
                     />
                   </LabelInputContainer>
 
+
+                  <LabelInputContainer className="mb-4">
+                    <Label htmlFor="email">Ajouter du Tag</Label>
+                    <input
+                      className="bg-tertiary py-2 px-1 rounded-sm"
+                      onChange={handleChange}
+                      id="email"
+                      placeholder="Ajouter du texte"
+                      type="text"
+                      name="tag"
+                    />
+                  </LabelInputContainer>
+
+
                   <LabelInputContainer className="mb-4">
                     <Label htmlFor="email">Ajouter du texte</Label>
                     <textarea
@@ -94,6 +108,8 @@ export default function ModalFormBtn({ text }) {
                       name="description"
                     />
                   </LabelInputContainer>
+
+
 
                   <LoadingBtn
                     className="bg-secondary relative group/btn w-full text-zinc-800 rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"

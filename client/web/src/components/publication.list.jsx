@@ -12,11 +12,10 @@ export default function PublicationList() {
       const { data } = await axios.get("http://localhost:5000/api/create-pub");
       setPub(data.publication);
     }
-
-    fetchData();
+    setInterval(fetchData,30)
   }, []);
   return (
-    <div className=" col-span-3 h-screen overflow-y-auto px-12 relative">
+    <div className=" col-span-4 h-screen overflow-y-auto px-12 relative">
       {pub &&
         pub.map((a, i) => {
           return <Publication {...a} key={i} />;

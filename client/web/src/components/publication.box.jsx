@@ -24,6 +24,7 @@ export default function Publication({
   comment,
   user,
   description,
+  tag
 }) {
   const [isFollowed, setIsFollowed] = React.useState(false);
   const [react, setReact] = useState(0);
@@ -61,10 +62,10 @@ export default function Publication({
       <CardBody className="px-3 py-0 text-small h-fit">
         <p className=" p-4">{description}</p>
         <div className=" flex items-center justify-center">
-          <img src={sary} className=" rounded-lg w-full object-cover" />
+          {/* <img src={sary} className=" rounded-lg w-full object-cover" /> */}
         </div>
         <span className="pt-2">
-          #FrontendWithZoey
+          #{tag}
           <span className="py-2" aria-label="computer" role="img">
             💻
           </span>
@@ -102,15 +103,6 @@ export default function Publication({
           {nbre || 0}
         </div>
       </CardFooter>
-      <p className="text-xs text-gray-400 ml-2 underline mb-2">
-        Votre commentaire
-      </p>
-      <form>
-        <input
-          placeholder="Commenter ici ..."
-          className=" w-full py-2 px-1 rounded-full pl-4 mt-2 bg-[#ffffff3d]"
-        />
-      </form>
     </Card>
   );
 }

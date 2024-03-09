@@ -17,7 +17,7 @@ const createPub = async (req, res) => {
     description,
     category,
     // path: cheminFichier,
-    // tag: tag ? [...tag] : "",
+    tag,
     user,
   });
   res
